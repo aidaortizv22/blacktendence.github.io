@@ -1,0 +1,387 @@
+/*Tipografia implementada*/
+@font-face { 
+    font-family: futura-extrabold;
+    src: url(fonts/FuturaStd-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: futura-medium;
+    src: url(fonts/FuturaStd-Medium.otf);
+}
+
+/*Definim que no volem subratllat als enllaços interns de la pàgina*/
+*{
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Característiques que defeneixen el cos de la pàgina*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: futura-medium; 
+}
+
+/*Definim les característiques de l'apartat anomenat container*/
+.container{
+    padding: 20px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*Paràmetres per definir l'estil del text de títol i el go up */
+h1{  
+    font-family: futura-extrabold;
+    color: #000000;
+    font-size: 50px;
+    text-align: right;
+    margin-right: 50px;
+    margin-bottom: 0px;
+    margin-top: -5px;
+}
+
+/*Paràmetres per definir l'estil del text MOST POPULAR i ABOUT US*/
+h2{ 
+    font-family: futura-extrabold;
+    color: black;
+    font-size: 100px;
+    text-align: right;
+    line-height: 0.5;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+/*Paràmetres per definir l'estil del text del CONTACT*/
+h3{ 
+    font-family: futura-extrabold;
+    color: black;
+    font-size: 18px;
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: -5px;
+}
+
+/*Paràmetres per definir L'estil de la informació del CONTACT*/
+h4{ 
+    font-family: futura-medium;
+    color: black;
+    font-size: 15px;
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: -5px;
+}
+
+/*Paràmetres per definir L'estil del text de la informació inferior*/
+h5{ 
+    font-family: futura-medium;
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+
+/*Paràmetres per definir L'estil del text de la informació inferior*/
+h6{ 
+    font-family: futura-medium;
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    line-height: 2;
+    margin-right: 20px;
+    margin-bottom: 70px;
+    margin-top: -5px;
+}
+
+/*Paràmetres per definir l'estil de la informació del ABOUT US*/
+p{ 
+    color: black;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.8;
+    margin-left: 17px;
+    margin-right: 17px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+/*Paràmetres per definir l'estil de la capçalera*/
+header{
+    width: 100%;
+    height: 30%;  
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/*Paràmetres per definir l'estil de la navegació*/
+nav{
+    padding: 30px 50px 0 0;
+    background: rgb(255, 255, 255);
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.link{ 
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo{
+    height: 60px;
+    margin-bottom: 1px;  
+}
+
+nav ul{ 
+    float: right;
+    margin-top: 40px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+nav ul li{ 
+    display: inline-block;
+}
+
+nav ul li a{ 
+    color: black;
+    font-size: 16px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-right: 15px;
+    font-family: futura-medium;
+}
+
+li a.active, li a:hover{ 
+    color: #898989;
+    transition: .5s;
+}
+
+.checkbtn{ 
+    font-size: 35px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-top: 0px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{ 
+    display: none;
+}
+
+/*Disseny adaptable*/
+@media (max-width: 858px){ 
+
+    h1{
+        font-size: 30px;
+    }
+
+    h2{
+        font-size: 60px;
+    }
+
+    h3{
+        font-size: 12px;
+    }
+
+    h4{
+        font-size: 10px;
+    }
+
+    h5{
+        font-size: 12px;
+    }
+
+    h6{
+        font-size: 10px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+
+    ul{ 
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        color: white
+    }
+
+    nav ul li{ 
+        display: block;
+        margin: 60px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{  
+        color: white;
+        font-size: 20px;
+    }
+
+    li a:hover, li a.active{ 
+        background: none;
+        color: #383838;
+    }
+
+    #check:checked ~ ul{ 
+        left:0;
+    }
+
+}
+
+/*Adaptació del logotip*/
+.logo{
+    margin-left: -15px;
+    height: 60px;
+    margin-bottom: 1px;  
+}
+
+/*Adaptació de les imatges*/
+.images{
+    overflow:hidden;
+    position: relative;
+    padding: 5px; 
+    margin: 5px;
+}
+
+ .images > img{
+    width: 120%;
+    height: 120%;
+    object-fit: cover ;
+    display: block;
+ }
+
+ .images > h6{
+    width: 120%;
+    height: 120%;
+    object-fit: cover ;
+    display: block;
+ }
+
+
+@media (max-width: 759px){
+
+    h1{
+        font-size: 35px;
+    }
+    
+    h2{
+        font-size: 65px;
+    }
+    
+    h3{
+        font-size: 15px;
+    }
+    
+    h4{
+        font-size: 13px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    h5{
+        font-size: 15px;
+    }
+    
+    h6{
+        font-size: 13px;
+    }
+    
+    p{
+        font-size: 20px;
+    }
+
+}
+
+/*Disseny del peu de pàgina*/
+footer{
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+/*Establim l'estructura de la web fins que la pantalla sigui 900 pixels d'ample*/
+@media screen and (max-width:900px){ 
+
+    header{
+        background-position: center;
+    }
+
+    .images{
+        width: 100%;
+    }
+
+}
+
+/*Establim l'estructura de la web fins que la pantalla sigui 900 pixels d'ample*/
+@media screen and (max-width:500px){ 
+    
+    h1{
+        font-size: 28px;
+    }
+    
+    h2{
+        font-size: 45px;
+    }
+    
+    h3{
+        font-size: 10px;
+    }
+    
+    h4{
+        font-size: 8px;
+    }
+    
+    h5{
+        font-size: 10px;
+    }
+    
+    h6{
+        font-size: 8px;
+    }
+    
+    p{
+        font-size: 15px;
+    }
+
+    nav{
+        padding: 30px 0 0 0;
+    }
+
+    nav > a{
+        margin-right: 5px;
+    }
+
+}
